@@ -20,12 +20,12 @@ ul,li{
   margin: 0;
   list-style: none;
 }
-body {	
+body {  
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;   
-  background-color: #484C57;
-	color: #777E91;	
+  background-color: #FFF5E3;
+  color: #777E91; 
   margin: 0;
   min-width: 400px;
 }
@@ -58,7 +58,7 @@ main {
 
 }
 .header-area {
-  background-color: #353945;
+  background-color: #C6D8D3;
   border-radius: 16px 16px 0px 0px;
 }
 
@@ -141,7 +141,7 @@ nav {
 /* ==Enter your prompt area-start - */
 .keyword-area {
   padding-top: 40px;
-  background-color: #23262F;
+  background-color: #C6D8D3;
   padding-bottom: 15px;
   border-radius: 0px 0px 16px 16px;
   margin-bottom: 20px;
@@ -183,7 +183,7 @@ nav {
 
 }
 .key-wrod-inner pre{
-  color: rgb(204, 198, 198);
+  color: #353232;
   font-family: 'Poppins';
 
   font-size: 15px;
@@ -222,7 +222,7 @@ nav {
 .x-icon {
   width: 25px;
   height: 25px;
-  background-color: #EF466F;
+  background-color: #C6D8D3;
   border-radius: 50%;
   text-align: center;
   line-height: 24px;

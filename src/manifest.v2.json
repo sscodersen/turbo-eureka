@@ -1,6 +1,6 @@
 {
-    "name": "GPTAnywhere 1.1",
-    "description": "Super Easy access to ChatGPT with a simple Chrome-Extension",
+    "name": "Nectar 1.1",
+    "description": "Nectar is a conversational AI-powered Chrome extension that lets you interact with an AI chatbot from your browser. Get instant answers to your questions, complete tasks, and have fun! powered by GPT-2",
     "version": "1.0.0",
     "manifest_version": 2,
     "action": {

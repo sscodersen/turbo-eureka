@@ -6,7 +6,7 @@ const xIcon = document.getElementById("x-icon")
 
 async function run(question) { 
   // loading for port Message...
-  container.innerHTML = '<p class="loading">Waiting for ChatGPT response...</p>'; 
+  container.innerHTML = '<p class="loading">Waiting for NectarGPT response...</p>'; 
 
   const port = Browser.runtime.connect(); 
   
@@ -16,7 +16,7 @@ async function run(question) {
     if (msg.answer) {
       console.log("answer: " + msg.answer) // <-- Console.Log 1
 
-      container.innerHTML = '<p><span class="prefix">ChatGPT:</span><pre></pre></p>';
+      container.innerHTML = '<p><span class="prefix">NectarGPT:</span><pre></pre></p>';
        // Answer Output
       container.querySelector("pre").textContent = msg.answer;
 

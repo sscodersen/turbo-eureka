@@ -1,8 +1,8 @@
 <h1 align="center">Hi 👋, I'm Serdar</h1>
 <h3 align="center">A passionate fullstack developer from Berlin</h3>
 
-- 🔭This project is about **a ChatGPT Chrome Extension**
-- 🧡 ProductHunt: https://www.producthunt.com/posts/gptanywhere
+- 🔭This project is about **a NectarGPT Chrome Extension**
+- 🧡 ProductHunt: https://www.producthunt.com/posts/NectarGPT
 - 📫 How to reach me **Twitter: @serdarplg**
 
 <h3 align="left">Connect with me:</h3>
