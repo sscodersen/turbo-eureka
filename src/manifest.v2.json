@@ -1,0 +1,20 @@
+{
+    "name": "GPTAnywhere 1.1",
+    "description": "Super Easy access to ChatGPT with a simple Chrome-Extension",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "action": {
+        "default_popup": "frontend/index.html",
+        "default_icon": "logo.png"    
+    },
+    "permissions": [
+        "webRequest", 
+        "https://*.openai.com/"
+    ],
+    "background": {
+      "scripts": [
+        "background/index.js",
+        "node_modules/webextension-polyfill/dist/browser-polyfill.js"
+      ]
+    }
+  }
