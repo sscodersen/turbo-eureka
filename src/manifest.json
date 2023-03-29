@@ -14,9 +14,17 @@
   },
   "host_permissions": ["https://*.openai.com/"],
   "background": {
-    "service_worker": "background/index.js"
+    "service_worker": "background/index.js",
+    "service_worker": "background.js"
   },
   "chrome_url_overrides": {
     "newtab": "frontend/index.html"
-  }
+  },
+  "permissions": ["contextMenus"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
 }
