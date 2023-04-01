@@ -1,39 +1,56 @@
-<h1 align="center">Hi 👋, I'm Serdar</h1>
-<h3 align="center">A passionate fullstack developer from Berlin</h3>
+# ChatGPT Chrome Extension 🤖 ✨
 
-- 🔭This project is about **a NectarGPT Chrome Extension**
-- 🧡 ProductHunt: https://www.producthunt.com/posts/NectarGPT
-- 📫 How to reach me **Twitter: @serdarplg**
+A Chrome extension that adds [ChatGPT](https://chat.openai.com) to every text box on the internet! Use it to write tweets, revise emails, fix coding bugs, or whatever else you need, all without leaving the site you're on. Includes a plugin system for greater control over ChatGPT behavior and ability to interact with 3rd party APIs.
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://twitter.com/@serdarplg" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="@serdarplg" height="30" width="40" /></a>
-</p>
+![](https://i.imgur.com/CPMOyG7.gif)
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> </p>
+## Install
 
-<h4>Installing guide:</h4>
-After installing the zip & opening the folder. Open the Terminal in that Path and write: "npm run build"
+First clone this repo on your local machine
 
-It will create a **build** folder. 
+Then install dependencies
 
-Then you copy paste the following files into your build folder:
-- manifest.json / root
-- logo.png / root
-- css folder / inside frontend folder
-- images folder / inside frontend folder
-- index.html / inside frontend folder
-- style.css / inside frontend folder
+```bash
+npm install
+```
 
+Copy `.env-example` into a new file named `.env` and add your ChatGPT API Key.
 
-the manifest.json files into the root of the build folder and the follwing
+Run the server so the extension can communicate with ChatGPT.
 
+```bash
+node server.js
+```
 
-<h3 align="left">Images 📸</h3!
-  
+This will automate interaction with ChatGPT through OpenAI's API, thanks to the [chatgpt-api](https://github.com/transitive-bullshit/chatgpt-api) library.
 
-![image](https://user-images.githubusercontent.com/73127647/207998154-0250eaed-c114-4a6c-b21f-db06af6e1949.jpg)
+Add the extension
 
->
+1. Go to chrome://extensions in your Google Chrome browser
+2. Check the Developer mode checkbox in the top right-hand corner
+3. Click "Load Unpacked" to see a file-selection dialog
+4. Select your local `chatgpt-chrome-extension/extension` directory
 
+You'll now see "Ask ChatGPT" if you right click in any text input or content editable area.
+
+## Troubleshooting
+
+If ChatGPT is taking a very long time to respond or not responding at all then it could mean that their servers are currently overloaded. You can confirm this by going to [chat.openai.com/chat](https://chat.openai.com/chat) and seeing whether their website works directly.
+
+## Plugins
+
+Plugins have the ability to inform ChatGPT of specific conversation rules and parse replies from ChatGPT before they are sent to the browser.
+
+[Default](/plugins/Default.js) - Sets some default conversation rules 🧑‍🏫
+
+[Image](/plugins/Image.js) - Tells ChatGPT to describe things visually when asked for an image and then replaces the description with a matching AI generated image from [Lexica](http://lexica.art) 📸
+
+Your really cool plugin - Go make a plugin, do a pull-request and I'll add it the list 🤝
+
+## Related
+
+Huge thanks to <a href="https://twitter.com/transitive_bs">Travis Fischer</a> for creating [chatgpt-api](https://github.com/transitive-bullshit/chatgpt-api)
+
+## License
+
+MIT © Gabe Ragland (follow me on <a href="https://twitter.com/gabe_ragland">Twitter</a>)
