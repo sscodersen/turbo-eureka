@@ -1,56 +1,41 @@
-# ChatGPT Chrome Extension 🤖 ✨
+# select-gpt
 
-A Chrome extension that adds [ChatGPT](https://chat.openai.com) to every text box on the internet! Use it to write tweets, revise emails, fix coding bugs, or whatever else you need, all without leaving the site you're on. Includes a plugin system for greater control over ChatGPT behavior and ability to interact with 3rd party APIs.
+A chrome extension that lets you select any text and run it through ChatGPT
 
-![](https://i.imgur.com/CPMOyG7.gif)
+## Usage
 
-## Install
+- On any webpage, select the text to be run through ChatGPT.
+- Click on the extension button in your toolbar and wait for the result to load.
 
-First clone this repo on your local machine
+![Demo](./assets/gifs/demo.gif)
 
-Then install dependencies
+## Installation
 
-```bash
-npm install
-```
+- Download the [zipped source code](https://github.com/mihiraggarwal/select-gpt/archive/refs/heads/main.zip) and unzip it.
 
-Copy `.env-example` into a new file named `.env` and add your ChatGPT API Key.
+  Or download the code using
 
-Run the server so the extension can communicate with ChatGPT.
+  ```
+  git clone https://github.com/mihiraggarwal/select-gpt.git
+  ```
 
-```bash
-node server.js
-```
+- Go to the extensions page for your browser. For Chrome, go to `chrome://extensions/`.
+- Turn on developer mode by toggling it on the top right.
+- Click on Load Unpacked and navigate to the folder downloaded from GitHub.
+  
+The extension will now be visible in the extensions panel in the toolbar; it can be pinned and used from there.
 
-This will automate interaction with ChatGPT through OpenAI's API, thanks to the [chatgpt-api](https://github.com/transitive-bullshit/chatgpt-api) library.
-
-Add the extension
-
-1. Go to chrome://extensions in your Google Chrome browser
-2. Check the Developer mode checkbox in the top right-hand corner
-3. Click "Load Unpacked" to see a file-selection dialog
-4. Select your local `chatgpt-chrome-extension/extension` directory
-
-You'll now see "Ask ChatGPT" if you right click in any text input or content editable area.
+> After installing the extension, you will need to close and reopen the browser for the very first use.
 
 ## Troubleshooting
 
-If ChatGPT is taking a very long time to respond or not responding at all then it could mean that their servers are currently overloaded. You can confirm this by going to [chat.openai.com/chat](https://chat.openai.com/chat) and seeing whether their website works directly.
+- Using the extension requires having created an account on [ChatGPT](https://chat.openai.com). Once in a while, the extension will redirect to that page to pass the cloudflare check.
+- If you are using brave browser, be sure to uncheck "Prevent sites from fingerprinting me based on my language preferences" in `brave://settings/shields`
+  
+  ![Brave troubleshooting](./assets/imgs/brave-troubleshooting.png)
 
-## Plugins
+- Since the extension gets the response as a readable stream, it shouldn't take too long to load. If it does so, simply close the popup and run it again.
 
-Plugins have the ability to inform ChatGPT of specific conversation rules and parse replies from ChatGPT before they are sent to the browser.
+## References
 
-[Default](/plugins/Default.js) - Sets some default conversation rules 🧑‍🏫
-
-[Image](/plugins/Image.js) - Tells ChatGPT to describe things visually when asked for an image and then replaces the description with a matching AI generated image from [Lexica](http://lexica.art) 📸
-
-Your really cool plugin - Go make a plugin, do a pull-request and I'll add it the list 🤝
-
-## Related
-
-Huge thanks to <a href="https://twitter.com/transitive_bs">Travis Fischer</a> for creating [chatgpt-api](https://github.com/transitive-bullshit/chatgpt-api)
-
-## License
-
-MIT © Gabe Ragland (follow me on <a href="https://twitter.com/gabe_ragland">Twitter</a>)
+- <https://github.com/wong2/chat-gpt-google-extension>
