@@ -1,56 +1,43 @@
-# ChatGPT Chrome Extension 🤖 ✨
+# ChatGPT everywhere
 
-A Chrome extension that adds [ChatGPT](https://chat.openai.com) to every text box on the internet! Use it to write tweets, revise emails, fix coding bugs, or whatever else you need, all without leaving the site you're on. Includes a plugin system for greater control over ChatGPT behavior and ability to interact with 3rd party APIs.
+[ChatGPT-Everywhere](https://chrome.google.com/webstore/detail/chatgpt-everywhere/kebfhgodkejbfelbbcekkamfpcichken) is an open-source chrome extension that enhances your writing skills with the power of GPT. It enables you to use GPT on almost any input field on the web, such as writing an email in Gmail, a ticket in Jira, a message on Twitter, or a comment on GitHub.
 
-![](https://i.imgur.com/CPMOyG7.gif)
+This extension has a range of features intended for writers to optimize their writing experience:
+- Improve your text:  It suggests better word choices and phrasing to make your writing more sophisticated.
+- Make it longer: If you're struggling to hit a word count, this option helps you research and add more information.
+- Make it shorter: Want to cut down words without compromising the context? This feature provides you with a concise and accurate summary of your content.
+- Create summary: It generates a compact summary of your paragraphs with the essential notes.
+- Ask question: This feature lets you execute commands such as "write a resignation letter," and GPT will automatically execute the command for you.
 
-## Install
+ChatGPT-Everywhere is fully open-source, and we encourage Pull Requests to add new functionality or improvements. 
 
-First clone this repo on your local machine
+## Usage
 
-Then install dependencies
+Simply install the extension from the [Chrome Web Store](https://chrome.google.com/webstore/detail/chatgpt-everywhere/kebfhgodkejbfelbbcekkamfpcichken). Click on the extension icon to open the settings page and enter your API key. You can now use the extension on any textbox on the web.
+Get your OpenAI API key at https://platform.openai.com/account/api-keys. 
 
-```bash
-npm install
-```
+### Support us
+This extension is free and open-source. If you like the extension, please support us by leaving a short review on the [Chrome Web Store](https://chrome.google.com/webstore/detail/chatgpt-everywhere/kebfhgodkejbfelbbcekkamfpcichken) and star this repository.
 
-Copy `.env-example` into a new file named `.env` and add your ChatGPT API Key.
+## Development 
 
-Run the server so the extension can communicate with ChatGPT.
+This extension was created with [Extension CLI](https://oss.mobilefirst.me/extension-cli/).
 
-```bash
-node server.js
-```
+### Available Commands
 
-This will automate interaction with ChatGPT through OpenAI's API, thanks to the [chatgpt-api](https://github.com/transitive-bullshit/chatgpt-api) library.
+| Commands | Description |
+| --- | --- |
+| `npm run start` | build extension, watch file changes |
+| `npm run build` | generate release version |
+| `npm run docs` | generate source code docs |
+| `npm run clean` | remove temporary files |
+| `npm run test` | run unit tests |
+| `npm run sync` | update config files |
 
-Add the extension
+For CLI instructions see [User Guide &rarr;](https://oss.mobilefirst.me/extension-cli/)
 
-1. Go to chrome://extensions in your Google Chrome browser
-2. Check the Developer mode checkbox in the top right-hand corner
-3. Click "Load Unpacked" to see a file-selection dialog
-4. Select your local `chatgpt-chrome-extension/extension` directory
+To use locally simply clone this repository and run `npm install` to install the dependencies. Then run `npm run start` to build the extension and watch for file changes. You can now load the extension in Chrome by going to `chrome://extensions` and clicking on `Load unpacked` and selecting the `dist` folder.
 
-You'll now see "Ask ChatGPT" if you right click in any text input or content editable area.
+## Contributing
 
-## Troubleshooting
-
-If ChatGPT is taking a very long time to respond or not responding at all then it could mean that their servers are currently overloaded. You can confirm this by going to [chat.openai.com/chat](https://chat.openai.com/chat) and seeing whether their website works directly.
-
-## Plugins
-
-Plugins have the ability to inform ChatGPT of specific conversation rules and parse replies from ChatGPT before they are sent to the browser.
-
-[Default](/plugins/Default.js) - Sets some default conversation rules 🧑‍🏫
-
-[Image](/plugins/Image.js) - Tells ChatGPT to describe things visually when asked for an image and then replaces the description with a matching AI generated image from [Lexica](http://lexica.art) 📸
-
-Your really cool plugin - Go make a plugin, do a pull-request and I'll add it the list 🤝
-
-## Related
-
-Huge thanks to <a href="https://twitter.com/transitive_bs">Travis Fischer</a> for creating [chatgpt-api](https://github.com/transitive-bullshit/chatgpt-api)
-
-## License
-
-MIT © Gabe Ragland (follow me on <a href="https://twitter.com/gabe_ragland">Twitter</a>)
+We welcome contributions from the community, make a issue to discuss your idea or submit a pull request.
