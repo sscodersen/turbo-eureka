@@ -1,14 +1,16 @@
-// Create a context menu item
-chrome.contextMenus.create({
-  id: "ask-chatgpt",
-  title: "Ask ChatGPT",
-  contexts: ["selection"],
+// Connect to the SSE endpoint
+const source = new EventSource("http://localhost:3000/sse");
+
+// Listen for incoming messages
+source.addEventListener("message", (event) => {
+  // Parse the message data as JSON
+  const message = JSON.parse(event.data);
+  // Send a message to the content script with the server's response
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    chrome.tabs.sendMessage(tabs[0].id, {
+      type: "CHATGPT_REPLY",
+      reply: message.reply,
+    });
+  });
 });
 
-// Listen for when the user clicks on the context menu item
-chrome.contextMenus.onClicked.addListener((info, tab) => {
-  if (info.menuItemId === "ask-chatgpt") {
-    // Send a message to the content script with the selected text
-    chrome.tabs.sendMessage(tab.id, { type: "ASK_CHATGPT", text: info.selectionText });
-  }
-});
