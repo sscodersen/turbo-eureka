@@ -1,12 +1,12 @@
 {
-  "name": "chatgpt-everywhere",
-  "description": "Adds chat-gpt functionality to any textbox on the web.",
+  "name": "Nectar",
+  "description": "Nectar is a conversational AI-powered Chrome extension that lets you interact with an AI chatbot from your browser. Get instant answers to your questions, complete tasks, and have fun! powered by GPT-4",
   "version": "0.0.1",
   "homepage": "http://chrome.google.com/webstore",
-  "author": "Marcel Panse",
+  "author": "Satoshi Nakamoto MR",
   "repository": {
     "type": "git",
-    "url": "https://github.com/marcelpanse/chatgpt-everywhere"
+    "url": "https://github.com/socialtribexyz/nectarGPT/blob/main/NectarGPT/prompt.txt"
   },
   "scripts": {
     "start": "xt-build -e dev -w",

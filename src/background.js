@@ -3,7 +3,7 @@ import {Configuration, OpenAIApi} from 'openai-edge'
 chrome.runtime.onInstalled.addListener(async () => {
   chrome.contextMenus.create({
     id: 'chatgpt',
-    title: 'ChatGPT',
+    title: 'NectarGPT',
     contexts: ['selection'],
   })
   chrome.contextMenus.create({
@@ -33,7 +33,7 @@ chrome.runtime.onInstalled.addListener(async () => {
   chrome.contextMenus.create({
     id: 'command',
     parentId: 'chatgpt',
-    title: 'Execute command',
+    title: 'Automate task',
     contexts: ['selection'],
   })
 })
